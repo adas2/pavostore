@@ -2,6 +2,15 @@
 
 Pavostore is a simple read-only key-value store backed by file I/O and in-memory caching.
 
+## To build
+```
+go build
+```
+## To run
+```
+./pavostore -port 8080 -filename ./input_data/test.data
+```
+
 ## High Level Design
 
 ![figure](./keyvalstore.png)
@@ -47,8 +56,8 @@ In case of a system crash and accidental deletions, we want to keep a copy of ou
     - Caching mechanism could be improved with better preloading and replacement algorithms. 
 
 * How many milliseconds it takes for the client to get a response on average? How could you improve the latency?
-    - Cache only latency ~TBD
-    - File I/O latency for sample input ~TBD
+    - Cache only latency ~10-14ms
+    - File I/O latency for sample input ~15ms (not much of a difference)
 
 * What are some failure patterns that you can anticipate?
     - File system gets corrupted, wrong/no value is returned

@@ -33,5 +33,5 @@ func handleGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintf(w, "%s=%s\n", key, value)
+	fmt.Fprintf(w, "%s = %s\n", key, value)
 }

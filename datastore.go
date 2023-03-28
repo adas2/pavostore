@@ -11,6 +11,7 @@ import (
 var once sync.Once
 var instance *DataStore
 
+// Max cache size
 const Max = 1000000
 
 type DataStore struct {
